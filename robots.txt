@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://william4s.github.io/sitemap.xml
