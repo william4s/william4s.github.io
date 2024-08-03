@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>william4s&#39; blog</title>
+    <link>https://william4s.github.io/</link>
+    <description>Recent content on william4s&#39; blog</description>
+    <generator>Hugo -- 0.131.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Aug 2024 02:01:49 +0800</lastBuildDate>
+    <atom:link href="https://william4s.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java在竞赛中应用</title>
+      <link>https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Sun, 04 Aug 2024 02:01:49 +0800</pubDate>
+      <guid>https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/</guid>
+      <description>JAVA快速读入与输出 BufferedReader + String + split
+import java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(&amp;#34; &amp;#34;); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i&amp;lt;=n;i++) { line=br.readLine().split(&amp;#34; &amp;#34;); for(int j=1;j&amp;lt;=m;j++) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i&amp;lt;=n;i++) { for(int j=1;j&amp;lt;=m;j++) { bw.write(String.format(&amp;#34;%d &amp;#34;, f[i][j])); } bw.write(&amp;#34;\n&amp;#34;); } bw.flush(); } } BufferedReader+StringToken（不推荐）
+import java.io.BufferedReader; import java.</description>
+    </item>
+  </channel>
+</rss>

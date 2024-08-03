@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Java在竞赛中应用 | william4s&#39; blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="JAVA快速读入与输出 BufferedReader &#43; String &#43; split
+import java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(&#34; &#34;); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i&lt;=n;i&#43;&#43;) { line=br.readLine().split(&#34; &#34;); for(int j=1;j&lt;=m;j&#43;&#43;) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i&lt;=n;i&#43;&#43;) { for(int j=1;j&lt;=m;j&#43;&#43;) { bw.write(String.format(&#34;%d &#34;, f[i][j])); } bw.write(&#34;\n&#34;); } bw.flush(); } } BufferedReader&#43;StringToken（不推荐）
+import java.io.BufferedReader; import java.">
+<meta name="author" content="">
+<link rel="canonical" href="https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://william4s.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://william4s.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://william4s.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://william4s.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://william4s.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Java在竞赛中应用" />
+<meta property="og:description" content="JAVA快速读入与输出 BufferedReader &#43; String &#43; split
+import java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(&#34; &#34;); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i&lt;=n;i&#43;&#43;) { line=br.readLine().split(&#34; &#34;); for(int j=1;j&lt;=m;j&#43;&#43;) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i&lt;=n;i&#43;&#43;) { for(int j=1;j&lt;=m;j&#43;&#43;) { bw.write(String.format(&#34;%d &#34;, f[i][j])); } bw.write(&#34;\n&#34;); } bw.flush(); } } BufferedReader&#43;StringToken（不推荐）
+import java.io.BufferedReader; import java." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-08-04T02:01:49+08:00" />
+<meta property="article:modified_time" content="2024-08-04T02:01:49+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java在竞赛中应用"/>
+<meta name="twitter:description" content="JAVA快速读入与输出 BufferedReader &#43; String &#43; split
+import java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(&#34; &#34;); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i&lt;=n;i&#43;&#43;) { line=br.readLine().split(&#34; &#34;); for(int j=1;j&lt;=m;j&#43;&#43;) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i&lt;=n;i&#43;&#43;) { for(int j=1;j&lt;=m;j&#43;&#43;) { bw.write(String.format(&#34;%d &#34;, f[i][j])); } bw.write(&#34;\n&#34;); } bw.flush(); } } BufferedReader&#43;StringToken（不推荐）
+import java.io.BufferedReader; import java."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://william4s.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Java在竞赛中应用",
+      "item": "https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Java在竞赛中应用",
+  "name": "Java在竞赛中应用",
+  "description": "JAVA快速读入与输出 BufferedReader + String + split\nimport java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(\u0026#34; \u0026#34;); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i\u0026lt;=n;i++) { line=br.readLine().split(\u0026#34; \u0026#34;); for(int j=1;j\u0026lt;=m;j++) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i\u0026lt;=n;i++) { for(int j=1;j\u0026lt;=m;j++) { bw.write(String.format(\u0026#34;%d \u0026#34;, f[i][j])); } bw.write(\u0026#34;\\n\u0026#34;); } bw.flush(); } } BufferedReader+StringToken（不推荐）\nimport java.io.BufferedReader; import java.",
+  "keywords": [
+    
+  ],
+  "articleBody": "JAVA快速读入与输出 BufferedReader + String + split\nimport java.io.*; import java.util.*; public class Main { static int f[][]=new int[105][105]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); String line[]=br.readLine().split(\" \"); int n,m; n=Integer.parseInt(line[0]); m=Integer.parseInt(line[1]); for(int i=1;i\u003c=n;i++) { line=br.readLine().split(\" \"); for(int j=1;j\u003c=m;j++) f[i][j]=Integer.parseInt(line[j-1]); } for(int i=1;i\u003c=n;i++) { for(int j=1;j\u003c=m;j++) { bw.write(String.format(\"%d \", f[i][j])); } bw.write(\"\\n\"); } bw.flush(); } } BufferedReader+StringToken（不推荐）\nimport java.io.BufferedReader; import java.util.*; import java.io.*; public class Main { static int a[]=new int[100005]; public static void main(String[] args) throws IOException { BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); StringTokenizer st=new StringTokenizer(br.readLine()); int n=Integer.parseInt(st.nextToken()); st=new StringTokenizer(br.readLine()); for(int i=1;i\u003c=n;i++){ a[i]=Integer.parseInt(st.nextToken()); } Arrays.sort(a,1,n+1); long max=0,money=0; for(int i=1;i\u003c=n;i++){ long tmp=(long)a[i]*(n-i+1); if(tmp\u003emax){ max=tmp; money=a[i]; } } System.out.println(String.format(\"%d %d\",max,money)); } } 文件读入(TO DO) 常用函数 数组填充：Arrays.fill(b, 0);\n字典序列比较：str1.compareTo(str2),str1",
+  "wordCount" : "858",
+  "inLanguage": "en",
+  "datePublished": "2024-08-04T02:01:49+08:00",
+  "dateModified": "2024-08-04T02:01:49+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://william4s.github.io/posts/java%E5%9C%A8%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%BA%94%E7%94%A8/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "william4s' blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://william4s.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://william4s.github.io/" accesskey="h" title="william4s&#39; blog (Alt + H)">william4s&#39; blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Java在竞赛中应用
+    </h1>
+    <div class="post-meta"><span title='2024-08-04 02:01:49 +0800 CST'>August 4, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="java快速读入与输出">JAVA快速读入与输出<a hidden class="anchor" aria-hidden="true" href="#java快速读入与输出">#</a></h1>
+<p>BufferedReader + String + split</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> f<span style="color:#f92672">[][]=</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>105<span style="color:#f92672">][</span>105<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        BufferedReader br<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.<span style="color:#a6e22e">in</span>));
+</span></span><span style="display:flex;"><span>        BufferedWriter bw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter(<span style="color:#66d9ef">new</span> OutputStreamWriter(System.<span style="color:#a6e22e">out</span>));
+</span></span><span style="display:flex;"><span>        String line<span style="color:#f92672">[]=</span>br.<span style="color:#a6e22e">readLine</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n,m;
+</span></span><span style="display:flex;"><span>        n<span style="color:#f92672">=</span>Integer.<span style="color:#a6e22e">parseInt</span>(line<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        m<span style="color:#f92672">=</span>Integer.<span style="color:#a6e22e">parseInt</span>(line<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1;i<span style="color:#f92672">&lt;=</span>n;i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        	line<span style="color:#f92672">=</span>br.<span style="color:#a6e22e">readLine</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>        	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>1;j<span style="color:#f92672">&lt;=</span>m;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        		f<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]=</span>Integer.<span style="color:#a6e22e">parseInt</span>(line<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1;i<span style="color:#f92672">&lt;=</span>n;i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>1;j<span style="color:#f92672">&lt;=</span>m;j<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        		bw.<span style="color:#a6e22e">write</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%d &#34;</span>, f<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span>));
+</span></span><span style="display:flex;"><span>        	}
+</span></span><span style="display:flex;"><span>        	bw.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bw.<span style="color:#a6e22e">flush</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>BufferedReader+StringToken（不推荐）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.BufferedReader;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> a<span style="color:#f92672">[]=</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>100005<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        BufferedReader br<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.<span style="color:#a6e22e">in</span>));
+</span></span><span style="display:flex;"><span>        StringTokenizer st<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> StringTokenizer(br.<span style="color:#a6e22e">readLine</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span>Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> StringTokenizer(br.<span style="color:#a6e22e">readLine</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1;i<span style="color:#f92672">&lt;=</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            a<span style="color:#f92672">[</span>i<span style="color:#f92672">]=</span>Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Arrays.<span style="color:#a6e22e">sort</span>(a,1,n<span style="color:#f92672">+</span>1);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> max<span style="color:#f92672">=</span>0,money<span style="color:#f92672">=</span>0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1;i<span style="color:#f92672">&lt;=</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> tmp<span style="color:#f92672">=</span>(<span style="color:#66d9ef">long</span>)a<span style="color:#f92672">[</span>i<span style="color:#f92672">]*</span>(n<span style="color:#f92672">-</span>i<span style="color:#f92672">+</span>1);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(tmp<span style="color:#f92672">&gt;</span>max){
+</span></span><span style="display:flex;"><span>                max<span style="color:#f92672">=</span>tmp;
+</span></span><span style="display:flex;"><span>                money<span style="color:#f92672">=</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%d %d&#34;</span>,max,money));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="文件读入to-do">文件读入(TO DO)<a hidden class="anchor" aria-hidden="true" href="#文件读入to-do">#</a></h2>
+<h1 id="常用函数">常用函数<a hidden class="anchor" aria-hidden="true" href="#常用函数">#</a></h1>
+<p>数组填充：<code>Arrays.fill(b, 0);</code></p>
+<p>字典序列比较：<code>str1.compareTo(str2)</code>,str1&lt;str2时，返回1，否则返回-1，相等0</p>
+<h1 id="排序sort">排序sort<a hidden class="anchor" aria-hidden="true" href="#排序sort">#</a></h1>
+<p>排序分<code>Arrays.sort()</code>和<code>Collections.sort(list);</code></p>
+<p>前者对数组进行排序，后者对<code>Collection</code>进行排序</p>
+<h3 id="sort的lamda">sort的lamda<a hidden class="anchor" aria-hidden="true" href="#sort的lamda">#</a></h3>
+<p>对int从大到小排序为例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Arrays.<span style="color:#a6e22e">sort</span>(a,1,11,<span style="color:#66d9ef">new</span> Comparator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span>(Integer a, Integer b){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> b<span style="color:#f92672">-</span>a;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="arrayssort">Arrays.sort()<a hidden class="anchor" aria-hidden="true" href="#arrayssort">#</a></h2>
+<p>对数组进行排序</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>import java.util.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>import java.io.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>import java.lang.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> num;
+</span></span><span style="display:flex;"><span>	String name,address;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Student</span>(<span style="color:#66d9ef">int</span> num, String name, String address) {
+</span></span><span style="display:flex;"><span>		super();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span>.num <span style="color:#f92672">=</span> num;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span>.name <span style="color:#f92672">=</span> name;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span>.address <span style="color:#f92672">=</span> address;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#960050;background-color:#1e0010">@</span>Override
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> String toString() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Student [num=&#34;</span> <span style="color:#f92672">+</span> num <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, name=&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, address=&#34;</span> <span style="color:#f92672">+</span> address <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//数字从小到大排序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CmpByNum</span> implements Comparator<span style="color:#f92672">&lt;</span>Student<span style="color:#f92672">&gt;</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span>(Student a,Student b) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> a.num<span style="color:#f92672">-</span>b.num; 
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//字典序排序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CmpByName</span> implements Comparator<span style="color:#f92672">&lt;</span>Student<span style="color:#f92672">&gt;</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span>(Student a,Student b) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> a.name.compareTo(b.name);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//数字从大到小排序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CmpTheInt</span> implements Comparator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span>(Integer a,Integer b) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> b<span style="color:#f92672">-</span>a;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] args)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Student[] arr
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">=</span> { <span style="color:#66d9ef">new</span> Student(<span style="color:#ae81ff">111</span>, <span style="color:#e6db74">&#34;bbbb&#34;</span>, <span style="color:#e6db74">&#34;london&#34;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> Student(<span style="color:#ae81ff">131</span>, <span style="color:#e6db74">&#34;aaaa&#34;</span>, <span style="color:#e6db74">&#34;nyc&#34;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> Student(<span style="color:#ae81ff">121</span>, <span style="color:#e6db74">&#34;cccc&#34;</span>, <span style="color:#e6db74">&#34;jaipur&#34;</span>) };
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        System.out.println(<span style="color:#e6db74">&#34;Unsorted&#34;</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> arr.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            System.out.println(arr[i]);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        Arrays.sort(arr, <span style="color:#66d9ef">new</span> CmpByName());
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        System.out.println(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Sorted&#34;</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> arr.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            System.out.println(arr[i]);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//对数字进行排序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Integer a[]<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Integer[<span style="color:#ae81ff">1005</span>];
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">10</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			a[i]<span style="color:#f92672">=</span>i;
+</span></span><span style="display:flex;"><span>		Arrays.sort(a,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">11</span>,<span style="color:#66d9ef">new</span> CmpTheInt());
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">10</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			System.out.print(String.format(<span style="color:#e6db74">&#34;%d &#34;</span>, a[i]));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="collectionssort">Collections.sort();<a hidden class="anchor" aria-hidden="true" href="#collectionssort">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Java program to demonstrate working of Collections.sort()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Collectionsorting</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Create a list of strings</span>
+</span></span><span style="display:flex;"><span>		ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> al <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>		al.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Geeks For Geeks&#34;</span>);
+</span></span><span style="display:flex;"><span>		al.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Friends&#34;</span>);
+</span></span><span style="display:flex;"><span>		al.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Dear&#34;</span>);
+</span></span><span style="display:flex;"><span>		al.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Is&#34;</span>);
+</span></span><span style="display:flex;"><span>		al.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Superb&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">/* Collections.sort method is sorting the
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">		elements of ArrayList in ascending order. */</span>
+</span></span><span style="display:flex;"><span>		Collections.<span style="color:#a6e22e">sort</span>(al);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Let us print the sorted list</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;List after the use of&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34; Collection.sort() :\n&#34;</span> <span style="color:#f92672">+</span> al);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="collection的使用">Collection的使用<a hidden class="anchor" aria-hidden="true" href="#collection的使用">#</a></h1>
+<p>类似于C++的STL</p>
+<h2 id="map">Map<a hidden class="anchor" aria-hidden="true" href="#map">#</a></h2>
+<p>HashTable相对于HashMap比较慢，不推荐用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JAVA" data-lang="JAVA"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>) <span style="color:#66d9ef">throws</span> IOException{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//map定义，记住为HashMap</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//底层是红黑树的TreeMap</span>
+</span></span><span style="display:flex;"><span>		Map<span style="color:#f92672">&lt;</span>String, Integer<span style="color:#f92672">&gt;</span> mp<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> TreeMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//底层是Hash的HashMap</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//Map&lt;String, Integer&gt; mp=new HashMap&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//map存一对键值对</span>
+</span></span><span style="display:flex;"><span>		mp.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;abc&#34;</span>, 123);
+</span></span><span style="display:flex;"><span>		mp.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;william4s&#34;</span>, 1227);
+</span></span><span style="display:flex;"><span>		mp.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;zly&#34;</span>, 109109);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//通过键找值</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;william4s&#34;</span>));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//相同键覆盖</span>
+</span></span><span style="display:flex;"><span>		mp.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;william4s&#34;</span>, 10000);
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;william4s&#34;</span>));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//Map遍历,类似于迭代器，但不同，因为只遍历key的Set</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(String key:mp.<span style="color:#a6e22e">keySet</span>()) {
+</span></span><span style="display:flex;"><span>			Integer value<span style="color:#f92672">=</span>mp.<span style="color:#a6e22e">get</span>(key);
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(key<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; : &#34;</span><span style="color:#f92672">+</span>value);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//判断键存不存在</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">containsKey</span>(<span style="color:#e6db74">&#34;bucunzai&#34;</span>));
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">containsKey</span>(<span style="color:#e6db74">&#34;zly&#34;</span>));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//判断值存不存在</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">containsValue</span>(10000));
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mp.<span style="color:#a6e22e">containsValue</span>(10001));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//清除</span>
+</span></span><span style="display:flex;"><span>		mp.<span style="color:#a6e22e">clear</span>();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="arraylistvector">ArrayList(vector)<a hidden class="anchor" aria-hidden="true" href="#arraylistvector">#</a></h2>
+<p>在CP中，使用ArrayList而不是Vector，因为前者更快</p>
+<p>LinkedList则底层是链表，删除的效率高，其他都一般</p>
+<p>ArrayList不是线程安全的,Vector是</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>) <span style="color:#66d9ef">throws</span> IOException{
+</span></span><span style="display:flex;"><span>		ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>  vec <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//在末尾增加</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1;i<span style="color:#f92672">&lt;=</span>5;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			vec.<span style="color:#a6e22e">add</span>(i);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//删除</span>
+</span></span><span style="display:flex;"><span>		vec.<span style="color:#a6e22e">remove</span>(0);
+</span></span><span style="display:flex;"><span>		vec.<span style="color:#a6e22e">remove</span>(3);
+</span></span><span style="display:flex;"><span>		vec.<span style="color:#a6e22e">add</span>(114);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//遍历，并且取下标对应的值</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>vec.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(vec.<span style="color:#a6e22e">get</span>(i));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//第一个出现该数字的下标</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(vec.<span style="color:#a6e22e">indexOf</span>(114));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//没出现就返回-1</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(vec.<span style="color:#a6e22e">indexOf</span>(514));
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(vec);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//修改下标为0的值</span>
+</span></span><span style="display:flex;"><span>		vec.<span style="color:#a6e22e">set</span>(0, 514);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//vec[0]=514;  这句话是错的，不太一样</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(vec);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//ArrayList转数组</span>
+</span></span><span style="display:flex;"><span>		Object arrs<span style="color:#f92672">[]=</span>vec.<span style="color:#a6e22e">toArray</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(Object it: arrs )
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%d &#34;</span>, it));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="stack">Stack<a hidden class="anchor" aria-hidden="true" href="#stack">#</a></h2>
+<p>基本操作相同，比较简单</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">acw1064</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>) <span style="color:#66d9ef">throws</span> IOException{
+</span></span><span style="display:flex;"><span>		Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> stk<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>		stk.<span style="color:#a6e22e">push</span>(1);
+</span></span><span style="display:flex;"><span>		stk.<span style="color:#a6e22e">push</span>(2);
+</span></span><span style="display:flex;"><span>		stk.<span style="color:#a6e22e">push</span>(3);
+</span></span><span style="display:flex;"><span>		stk.<span style="color:#a6e22e">push</span>(114);
+</span></span><span style="display:flex;"><span>		stk.<span style="color:#a6e22e">push</span>(514);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//从栈顶搜索元素</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(stk.<span style="color:#a6e22e">search</span>(114));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//pop，并有返回值</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(stk.<span style="color:#a6e22e">pop</span>());
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//top()</span>
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(stk.<span style="color:#a6e22e">peek</span>());
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="比赛前配置">比赛前配置<a hidden class="anchor" aria-hidden="true" href="#比赛前配置">#</a></h1>
+<h2 id="修改快捷键">修改快捷键<a hidden class="anchor" aria-hidden="true" href="#修改快捷键">#</a></h2>
+<p><img loading="lazy" src="./java%e5%9c%a8%e7%ab%9e%e8%b5%9b%e4%b8%ad%e5%ba%94%e7%94%a8.assets/image-20230328122350005.png" alt="image-20230328122350005"  />
+</p>
+<h2 id="代码补全">代码补全<a hidden class="anchor" aria-hidden="true" href="#代码补全">#</a></h2>
+<p>开启代码补全并且关闭任意键都选中补全</p>
+<p><img loading="lazy" src="./java%e5%9c%a8%e7%ab%9e%e8%b5%9b%e4%b8%ad%e5%ba%94%e7%94%a8.assets/image-20230326170510968.png" alt="image-20230326170510968"  />
+</p>
+<h2 id="缺省代码">缺省代码<a hidden class="anchor" aria-hidden="true" href="#缺省代码">#</a></h2>
+<p><img loading="lazy" src="./java%e5%9c%a8%e7%ab%9e%e8%b5%9b%e4%b8%ad%e5%ba%94%e7%94%a8.assets/9b7e8ec773f8e1d86b19107970ad62b0.png" alt="9b7e8ec773f8e1d86b19107970ad62b0"  />
+</p>
+<h1 id="常用算法">常用算法<a hidden class="anchor" aria-hidden="true" href="#常用算法">#</a></h1>
+<h2 id="dijkstra">dijkstra<a hidden class="anchor" aria-hidden="true" href="#dijkstra">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">E</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">long</span> INF <span style="color:#f92672">=</span> Long.<span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">/</span>2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException{
+</span></span><span style="display:flex;"><span>        BufferedReader f <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.<span style="color:#a6e22e">in</span>));
+</span></span><span style="display:flex;"><span>        PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(<span style="color:#66d9ef">new</span> OutputStreamWriter(System.<span style="color:#a6e22e">out</span>));
+</span></span><span style="display:flex;"><span>        StringTokenizer st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringTokenizer(f.<span style="color:#a6e22e">readLine</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span><span style="color:#f92672">[][][]</span> dists <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">[</span>n<span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>2<span style="color:#f92672">][</span>2<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        ArrayList<span style="color:#f92672">&lt;</span>Edge<span style="color:#f92672">&gt;[]</span> edges <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">[</span>n<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">+</span>1; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>            edges<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Edge<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">+</span>1; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0; j <span style="color:#f92672">&lt;</span> 2; j<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>                Arrays.<span style="color:#a6e22e">fill</span>(dists<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span>, INF);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringTokenizer(f.<span style="color:#a6e22e">readLine</span>());
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> w <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(st.<span style="color:#a6e22e">nextToken</span>());
+</span></span><span style="display:flex;"><span>            edges<span style="color:#f92672">[</span>a<span style="color:#f92672">]</span>.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> Edge(w, b));
+</span></span><span style="display:flex;"><span>            edges<span style="color:#f92672">[</span>b<span style="color:#f92672">]</span>.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> Edge(w, a));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        PriorityQueue<span style="color:#f92672">&lt;</span>State<span style="color:#f92672">&gt;</span> pq <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;</span>State<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>        pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> State(1, 0, 0, 0));
+</span></span><span style="display:flex;"><span>        dists<span style="color:#f92672">[</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>pq.<span style="color:#a6e22e">isEmpty</span>()){
+</span></span><span style="display:flex;"><span>            State curr <span style="color:#f92672">=</span> pq.<span style="color:#a6e22e">poll</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(curr.<span style="color:#a6e22e">weight</span> <span style="color:#f92672">&gt;</span> dists<span style="color:#f92672">[</span>curr.<span style="color:#a6e22e">node</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">db</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">nn</span><span style="color:#f92672">]</span>) <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(Edge e: edges<span style="color:#f92672">[</span>curr.<span style="color:#a6e22e">node</span><span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">long</span> dist1 <span style="color:#f92672">=</span> curr.<span style="color:#a6e22e">weight</span><span style="color:#f92672">+</span>e.<span style="color:#a6e22e">weight</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">long</span> dist2 <span style="color:#f92672">=</span> curr.<span style="color:#a6e22e">weight</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">long</span> dist3 <span style="color:#f92672">=</span> curr.<span style="color:#a6e22e">weight</span><span style="color:#f92672">+</span>2<span style="color:#f92672">*</span>e.<span style="color:#a6e22e">weight</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(dist1 <span style="color:#f92672">&lt;</span> dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">db</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">nn</span><span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                    dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">db</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">nn</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dist1;
+</span></span><span style="display:flex;"><span>                    pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> State(e.<span style="color:#a6e22e">dest</span>, dist1, curr.<span style="color:#a6e22e">db</span>, curr.<span style="color:#a6e22e">nn</span>));
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(curr.<span style="color:#a6e22e">nn</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">&amp;&amp;</span> dist2 <span style="color:#f92672">&lt;</span> dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">db</span><span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                    dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">db</span><span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dist2;
+</span></span><span style="display:flex;"><span>                    pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> State(e.<span style="color:#a6e22e">dest</span>, dist2, curr.<span style="color:#a6e22e">db</span>, 1));
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(curr.<span style="color:#a6e22e">db</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">&amp;&amp;</span> dist3 <span style="color:#f92672">&lt;</span> dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>1<span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">nn</span><span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                    dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>1<span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">nn</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dist3;
+</span></span><span style="display:flex;"><span>                    pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> State(e.<span style="color:#a6e22e">dest</span>, dist3, 1, curr.<span style="color:#a6e22e">nn</span>));
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(curr.<span style="color:#a6e22e">db</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">&amp;&amp;</span> curr.<span style="color:#a6e22e">nn</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">&amp;&amp;</span> dist1 <span style="color:#f92672">&lt;</span> dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                    dists<span style="color:#f92672">[</span>e.<span style="color:#a6e22e">dest</span><span style="color:#f92672">][</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dist1;
+</span></span><span style="display:flex;"><span>                    pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> State(e.<span style="color:#a6e22e">dest</span>, dist1, 1, 1));
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        StringBuilder ans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 2; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            ans.<span style="color:#a6e22e">append</span>(dists<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]+</span><span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        out.<span style="color:#a6e22e">println</span>(ans);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        out.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">State</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>State<span style="color:#f92672">&gt;</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> node;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> weight;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> db;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> nn;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">State</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">long</span> w, <span style="color:#66d9ef">int</span> db, <span style="color:#66d9ef">int</span> nn){
+</span></span><span style="display:flex;"><span>            node<span style="color:#f92672">=</span>n;
+</span></span><span style="display:flex;"><span>            weight<span style="color:#f92672">=</span>w;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">db</span><span style="color:#f92672">=</span>db;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">nn</span><span style="color:#f92672">=</span>nn;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareTo</span>(State s){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(weight <span style="color:#f92672">&lt;</span> s.<span style="color:#a6e22e">weight</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(weight <span style="color:#f92672">&gt;</span> s.<span style="color:#a6e22e">weight</span>) <span style="color:#66d9ef">return</span> 1;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> 0;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Edge</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> weight;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> dest;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Edge</span>(<span style="color:#66d9ef">long</span> w, <span style="color:#66d9ef">int</span> d){
+</span></span><span style="display:flex;"><span>            weight<span style="color:#f92672">=</span>w;
+</span></span><span style="display:flex;"><span>            dest<span style="color:#f92672">=</span>d;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="建议">建议<a hidden class="anchor" aria-hidden="true" href="#建议">#</a></h1>
+<p>去acwing，CF看其他人的JAVA代码，看其他人怎么写的，很多东西都可以写得很方便。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://william4s.github.io/">william4s&#39; blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
