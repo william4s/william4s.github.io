@@ -22,7 +22,7 @@ I am a Master's candidate at the Hangzhou Institute for Advanced Study, Universi
 My achievements include winning First Prize in both the Global and National Finals of the Huawei ICT Competition. As a key member in algorithm competitions, I have also secured Silver and Bronze medals in ACM-ICPC Regional Contests, a National First Prize in RoboCom (Top 0.5%), a National First Prize in the Lanqiao Cup (Top 2%), and a National Second Prize in the China Collegiate Computing Contest (CCCC).
 
 I am proficient in Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git, PyTorch, and Docker, and familiar with technologies in Large Language Models, AI Agents, and Natural Language Processing (NLP).
- <a href='https://scholar.google.com/citations?user=rhaxFZkAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
+ <!-- <a href='https://scholar.google.com/citations?user=rhaxFZkAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。 -->
 
 
   
