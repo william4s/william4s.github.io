@@ -17,27 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Shi Weichun
+I am a Master's candidate at the Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences (HIAS-UCAS), expecting to graduate in May 2027. My research focuses on Large Language Model (LLM) inference, Retrieval-Augmented Generation (RAG), and constraint solving, with one paper published at the top-tier conference EMNLP.
 
-M.Sc. Candidate @ University of Chinese Academy of Sciences, Hangzhou Institute for Advanced Study (Class of 2024), expected graduation May 2027.
+My achievements include winning First Prize in both the Global and National Finals of the Huawei ICT Competition. As a key member in algorithm competitions, I have also secured Silver and Bronze medals in ACM-ICPC Regional Contests, a National First Prize in RoboCom (Top 0.5%), a National First Prize in the Lanqiao Cup (Top 2%), and a National Second Prize in the China Collegiate Computing Contest (CCCC).
 
-My research focuses on Large Language Model (LLM) inference, Retrieval-Augmented Generation (RAG), and Constraint Solving. I have one publication at EMNLP.
-
-Recognized for excellence in competitive programming and tech competitions, including:
-
-Huawei ICT Competition Global and National Finals: 1st Prize
-
-ACM Regional Contest: Silver & Bronze Medals
-
-RoboCom National Competition: 1st Prize (Top 0.5%)
-
-Lanqiao Cup National Competition: 1st Prize (Top 2%)
-
-Tianchi Contest: National 2nd Prize
-
-Proficient in: Python, C/C++, Java, Bash
-Familiar with: macOS/Linux, Git, PyTorch, Docker
-Areas of Interest: Large Language Models, Agents, Natural Language Processing
+I am proficient in Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git, PyTorch, and Docker, and familiar with technologies in Large Language Models, AI Agents, and Natural Language Processing (NLP).
  <a href='https://scholar.google.com/citations?user=rhaxFZkAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
 
 
@@ -47,13 +31,13 @@ Areas of Interest: Large Language Models, Agents, Natural Language Processing
 
 # 📝 论文专利
 
-### 英文
+<!-- ### 英文
 ---
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors 2022</div><img src='images/sensors2022.svg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<!-- -	`Weichun Shi`*, Rongbiao Wang, Gongzhe Qiu, Yu Hu, Yihua Kang. Mechanism of magnetic flux leakage detection method based on the slotted ferromagnetic lift-off layer. *Sensors*, 2022, 22(9): 3587. (JCR:Q2; IF:3.847)  
-[[网页]](https://dx.doi.org/10.3390/s22093587) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/TangJ-2022-Mechanism%20of%20Magnetic%20Flux%20Leakage%20Detection%20Method%20Based%20on%20the%20Slotted.pdf) [[下载]](/pdf/TangJ-2022-Mechanism%20of%20Magnetic%20Flux%20Leakage%20Detection%20Method%20Based%20on%20the%20Slotted.pdf) -->
+-	`Weichun Shi`*, Rongbiao Wang, Gongzhe Qiu, Yu Hu, Yihua Kang. Mechanism of magnetic flux leakage detection method based on the slotted ferromagnetic lift-off layer. *Sensors*, 2022, 22(9): 3587. (JCR:Q2; IF:3.847)  
+[[网页]](https://dx.doi.org/10.3390/s22093587) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/TangJ-2022-Mechanism%20of%20Magnetic%20Flux%20Leakage%20Detection%20Method%20Based%20on%20the%20Slotted.pdf) [[下载]](/pdf/TangJ-2022-Mechanism%20of%20Magnetic%20Flux%20Leakage%20Detection%20Method%20Based%20on%20the%20Slotted.pdf)
 
 </div>
 </div>
@@ -106,7 +90,7 @@ Areas of Interest: Large Language Models, Agents, Natural Language Processing
 [[网页]](https://dx.doi.org/10.1007/s10921-018-0499-8) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/Li-2018-A%20New%20Micro%20Magnetic%20Bridge%20Probe%20in%20Magnetic%20Flux%20Leakage%20for%20Detecting.pdf) [[下载]](/pdf/Li-2018-A%20New%20Micro%20Magnetic%20Bridge%20Probe%20in%20Magnetic%20Flux%20Leakage%20for%20Detecting.pdf)
 
 -	Erlong Li, Yihua Kang, `Jian Tang`, Jianbo Wu, Xizi Yan. Analysis on Spatial Spectrum of Magnetic Flux Leakage Using Fourier Transform. *IEEE Transactions on Magnetics*. 2018, 54(8): 1–10. (JCR:Q3; IF:1.700)  
-[[网页]](https://dx.doi.org/10.1109/TMAG.2018.2844220) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/LiE-2018-Analysis%20on%20Spatial%20Spectrum%20of%20Magnetic%20Flux%20Leakage%20Using%20Fourier%20Transform.pdf) [[下载]](/pdf/LiE-2018-Analysis%20on%20Spatial%20Spectrum%20of%20Magnetic%20Flux%20Leakage%20Using%20Fourier%20Transform.pdf) -->
+[[网页]](https://dx.doi.org/10.1109/TMAG.2018.2844220) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/LiE-2018-Analysis%20on%20Spatial%20Spectrum%20of%20Magnetic%20Flux%20Leakage%20Using%20Fourier%20Transform.pdf) [[下载]](/pdf/LiE-2018-Analysis%20on%20Spatial%20Spectrum%20of%20Magnetic%20Flux%20Leakage%20Using%20Fourier%20Transform.pdf) --> -->
 
 ### 中文
 ---
