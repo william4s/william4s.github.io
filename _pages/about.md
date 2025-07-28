@@ -17,17 +17,30 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-我将博士毕业于湖北武汉的 华中科技大学 机械科学与工程学院，我的导师是康宜华教授。本科毕业于四川成都的 四川大学 制造科学与工程学院（现机械工程学院）。包括合著，我已经发表 20+ 篇学术论文
- <a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
+Shi Weichun
 
-我的研究领域包括：
-- 仪器仪表
-- 机械工程
-- 电磁无损检测
-- 漏磁检测
-- 涡流检测
-- 磁传感器
-- 无损检测装备开发
+M.Sc. Candidate @ University of Chinese Academy of Sciences, Hangzhou Institute for Advanced Study (Class of 2024), expected graduation May 2027.
+
+My research focuses on Large Language Model (LLM) inference, Retrieval-Augmented Generation (RAG), and Constraint Solving. I have one publication at EMNLP.
+
+Recognized for excellence in competitive programming and tech competitions, including:
+
+Huawei ICT Competition Global and National Finals: 1st Prize
+
+ACM Regional Contest: Silver & Bronze Medals
+
+RoboCom National Competition: 1st Prize (Top 0.5%)
+
+Lanqiao Cup National Competition: 1st Prize (Top 2%)
+
+Tianchi Contest: National 2nd Prize
+
+Proficient in: Python, C/C++, Java, Bash
+Familiar with: macOS/Linux, Git, PyTorch, Docker
+Areas of Interest: Large Language Models, Agents, Natural Language Processing
+ <a href='https://scholar.google.com/citations?user=rhaxFZkAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
+
+
   
 
 
