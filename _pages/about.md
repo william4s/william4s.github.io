@@ -17,11 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Master's candidate at the Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences (HIAS-UCAS), expecting to graduate in May 2027. My research focuses on Large Language Model (LLM) inference, Retrieval-Augmented Generation (RAG), and constraint solving, with one paper published at the top-tier conference EMNLP.
+I am a Master's candidate at the Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences (HIAS-UCAS), expecting to graduate in May 2027. My research focuses on Large Language Model (LLM) inference, Retrieval-Augmented Generation (RAG), and constraint solving, with one paper published at the conference EMNLP.
 
 My achievements include winning First Prize in both the Global and National Finals of the Huawei ICT Competition. As a key member in algorithm competitions, I have also secured Silver and Bronze medals in ACM-ICPC Regional Contests, a National First Prize in RoboCom (Top 0.5%), a National First Prize in the Lanqiao Cup (Top 2%), and a National Second Prize in the China Collegiate Computing Contest (CCCC).
 
-I am proficient in Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git, PyTorch, and Docker, and familiar with technologies in Large Language Models, AI Agents, and Natural Language Processing (NLP).
+I am familiar with Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git, PyTorch, and Docker, and familiar with technologies in Large Language Models, AI Agents, and Natural Language Processing (NLP).
  <!-- <a href='https://scholar.google.com/citations?user=rhaxFZkAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。 -->
 
 
@@ -30,6 +30,13 @@ I am proficient in Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git,
 
 
 # 📝 论文专利
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors 2022</div><img src='images/sensors2022.svg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+-	`Weichun Shi`*, Minghao Liu*, Wanting Zhang, Langchen Shi, Fuqi Jia, Feifei Ma†, Jian Zhang†. ConstraintLLM: A Neuro-Symbolic Framework for Industrial-Level Constraint Programming
+. Conference on Empirical Methods in Natural Language Processing **(EMNLP)**, 2025
+</div>
+</div>
 
 <!-- ### 英文
 ---
