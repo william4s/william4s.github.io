@@ -34,8 +34,9 @@ I am familiar with Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git,
 <div class='paper-box-text' markdown="1">
 
 -	`Weichun Shi`*, Minghao Liu*, Wanting Zhang, Langchen Shi, Fuqi Jia, Feifei Ma†, Jian Zhang†. 
-ConstraintLLM: A Neuro-Symbolic Framework for Industrial-Level Constraint Programming
-. 
+
+ConstraintLLM: A Neuro-Symbolic Framework for Industrial-Level Constraint Programming. 
+
 Conference on Empirical Methods in Natural Language Processing **(EMNLP)**, 2025
 </div>
 </div>
