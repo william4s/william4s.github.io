@@ -30,7 +30,7 @@ I am familiar with Python, C/C++, Java, and Bash, skilled with macOS/Linux, Git,
 
 
 # 📝 论文专利
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sensors 2022</div><img src='images/sensors2022.svg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ConstraintLLM</div><img src='images/constrainllm_framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 -	`Weichun Shi`*, Minghao Liu*, Wanting Zhang, Langchen Shi, Fuqi Jia, Feifei Ma†, Jian Zhang†. ConstraintLLM: A Neuro-Symbolic Framework for Industrial-Level Constraint Programming
